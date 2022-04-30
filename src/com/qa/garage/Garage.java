@@ -12,7 +12,6 @@ public class Garage {
 	private ArrayList<Vehicle> bigwhips = new ArrayList<Vehicle>();
 	
 	
-	
 	//CONSTRUCTOR
 	public Garage() {}
 	
@@ -39,7 +38,7 @@ public class Garage {
 			
 			
 		} else {
-			System.out.println("Not vehicle found for that entry!");
+			System.out.println("No vehicle found for that entry!");
 			
 		}
 			
@@ -73,11 +72,8 @@ public class Garage {
 			removeVehicle(found);
 		}
 		
-		public void emptyGarage() {
-			System.out.println("Vehicle(s) removed.");
-			this.bigwhips.clear();
-		}
-	//NOT SURE WHY I CANT PRINT STRINGS IN A SYSO
+	
+	
 		public void getBillById(int id) {
 			for (Vehicle vehicle : this.bigwhips) {
 				if (vehicle.getVehicleID() == id) {
@@ -89,7 +85,7 @@ public class Garage {
 				}
 				
 				
-	//NOT SURE WHY I CANT PRINT STRINGS IN A SYSO
+	
 		public void calculateIndBills() {
 			for (Vehicle vehicle : this.bigwhips) {
 						System.out.println("=".repeat(40));
@@ -114,9 +110,17 @@ public class Garage {
 						for (Vehicle vehicle : this.bigwhips) {
 						System.out.println(vehicle);
 						System.out.println("=".repeat(60));
+						break;
 						}
 						
-					}
+		}				
+//		public void emptyGarage() {
+//							System.out.println("Vehicle(s) removed.");
+//							this.bigwhips.clear();
+//		}
+						
+		
+}		
 					
 					
 					
@@ -126,5 +130,4 @@ public class Garage {
 					
 					
 					
-					
-}
+

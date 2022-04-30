@@ -7,8 +7,8 @@ public class Car extends Vehicle {
 	private String favourite;
 	
 	
-	public Car(int vehicleID, String type, String manufacturer, String colour, boolean canFly, int numberOfDoors, int numberOfWheels, String favourite, int price) {
-		super(vehicleID, type, manufacturer, colour, numberOfDoors, canFly, price);
+	public Car(String type, String manufacturer, String colour, boolean canFly, int numberOfDoors, int price, int numberOfWheels, String favourite) {
+		super(type, manufacturer, colour, numberOfDoors, canFly, price);
 		this.numberOfWheels = numberOfWheels;
 		this.favourite = favourite;
 	}
@@ -37,6 +37,13 @@ public class Car extends Vehicle {
 		return numberOfWheels * 30;
 
 }
+
+	@Override
+	public String toString() {
+		return "Car [Vehicle ID:"	+ getVehicleID() + ", Manufacturer:" + getManufacturer() + ", Colour:" + getColour()
+				+ " Number Of Wheels:" + numberOfWheels + ", Favourite:" + favourite + ", Number Of Doors:" + getNumberOfDoors() + ", Flying:" + isCanFly() + ", Price:"
+				+ getPrice() + ", Type:" + getType() + ", Class:" + getClass() + "]";
+	}
 
 	
 	

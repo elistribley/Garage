@@ -8,7 +8,7 @@ public class Bus extends Vehicle {
 	
 	public Bus(int vehicleID, String type, String manufacturer, String colour, int numberOfDoors, boolean canFly, int numberOfFloors,
 			int capacity, int price) {
-		super(vehicleID, type, manufacturer, colour, numberOfDoors, canFly, price);
+		super(type, manufacturer, colour, numberOfDoors, canFly, price);
 		this.numberOfFloors = numberOfFloors;
 		this.capacity = capacity;
 	}
@@ -29,5 +29,20 @@ public class Bus extends Vehicle {
 	@Override
 	public double calBill() {
 		return capacity * 26;
+		
+		
 }
+
+	@Override
+	public String toString() {
+		return "Bus [Vehicle ID:" + getVehicleID() +  "Manufacturer:" + getManufacturer() + ", Colour:" + getColour() + ", Number Of Doors:"
+				+ "Number Of Floors:" + numberOfFloors + ", Capacity:" + capacity + getNumberOfDoors() + ", Flying:" + isCanFly() + ", Price:" + getPrice() + ", getType:"
+				+ getType() + "]";
+	}
+	
+	
+	
+	 
+	
+	
 }

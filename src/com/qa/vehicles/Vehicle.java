@@ -14,9 +14,8 @@ public abstract class Vehicle {
 	
 	private static int count =0;
 	
-	public Vehicle(int vehicleID, String type, String manufacturer, String colour, int numberOfDoors, boolean canFly, int price) {
-		super();
-		this.vehicleID = vehicleID;
+	public Vehicle(String type, String manufacturer, String colour, int numberOfDoors, boolean canFly, int price) {
+		
 		this.vehicleID = count++;
 		this.manufacturer = manufacturer;
 		this.colour = colour;
@@ -36,6 +35,15 @@ public abstract class Vehicle {
 
 	public void setVehicleID(int vehicleID) {
 		this.vehicleID = vehicleID;
+	}
+	public String getType() {
+		return type;
+	}
+
+
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 
@@ -100,15 +108,7 @@ public abstract class Vehicle {
 
 	
 
-	public String getType() {
-		return type;
-	}
-
-
-
-	public void setType(String type) {
-		this.type = type;
-	}
+	
 
 
 
@@ -117,12 +117,6 @@ public abstract class Vehicle {
 
 
 	
-	@Override
-	public String toString() {
-		return "Vehicle [Vehicle ID = " + vehicleID + ", Type = " + type + ", Manufacturer = " + manufacturer + ", Colour = "
-				+ colour + ", Number Of Doors = " + numberOfDoors + ", Can it fly = " + canFly + ", Price = " + price + "]";
-	}
-
 
 
 	
